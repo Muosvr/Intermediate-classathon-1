@@ -1,19 +1,25 @@
 #include <stdio.h>
-#include <stdlib.h>
-
-int main(int argc, char *argv[]){
-    if (argc != 2){
-        printf("Usage: ./factorial number\n");
-        return 1;
-    }
-    
-    factorial(atoi(argv[2]));
-}
+#include <cs50.h>
+#include <string.h>
 
 int factorial(int n){
-    if (n = 1){
+    if (n == 1){
         return 1;
     }else{
         return n*factorial(n-1);
     }
+}
+
+
+int main (int argc, string argv[])
+{
+    if (argc != 2){
+        printf("Usage: factorialize number\n");
+        return 1;
+    }
+int num = atoi(argv[1]);
+
+printf("%i\n", factorial(num));
+return 0;
+
 }
